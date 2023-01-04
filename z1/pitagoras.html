@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d1">
+        ĆWICZENIE
+    </div>
+    <div class="d2">
+        <ul>
+            <li> <a href="logowanie.html">form1</a>
+        </ul>
+        <ul>
+            <li>form2
+        </ul>
+    </div>
+    <div class="f1">
+        <input type="text" id="aa" placeholder="Wpisz a" style="width: 100px; border: 1px black solid; border-radius: 5px;"> <br>
+        <input type="text" id="bb" placeholder="Wpisz b" style="width: 100px; border: 1px black solid; border-radius: 5px;"> <br> 
+        <input type="text" id="cc" placeholder="Wpisz c" style="width: 100px; border: 1px black solid; border-radius: 5px;"> <br> 
+        <input type="button" id="sprawdz" value="Sprawdź" onclick="oblicz()"><br> 
+        <p id="wynik"></p>
+    </div>
+    <div class="d4">
+        STOPKA
+    </div>
+</body>
+</html>
+
+<script>
+const oblicz =()=>{
+    let a1 = document.getElementById("aa").value;
+    let b1 = document.getElementById("bb").value;
+    let c1 = document.getElementById("cc").value;
+
+    a = parseInt(a1);
+    b = parseInt(b1);
+    c = parseInt(c1);
+
+    if(a*a+b*b == c*c){
+        wynik.innerHTML = "Pitagoras się zgadza";
+    }
+    else if(a*a+c*c == b*b){
+        wynik.innerHTML = "Pitagoras się zgadza";
+    }
+    else if(c*c+b*b == a*a){
+        wynik.innerHTML = "Pitagoras się zgadza";
+    }
+    else{
+        wynik.innerHTML = "Pitagoras się nie zgadza";
+    }
+
+    
+
+}
+</script>

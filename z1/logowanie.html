@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d1">
+        ĆWICZENIE
+    </div>
+    <div class="d2">
+        <ul>
+            <li> <a href="logowanie.html">form1</a>
+        </ul>
+        <ul>
+            <li>form2
+        </ul>
+    </div>
+    <div class="f1">
+        <input type="text" id="login" placeholder="Wpisz login" style="width: 100px; border: 1px black solid; border-radius: 5px;"> <br>
+        <input type="password" id="haslo" placeholder="Wpisz hasło" style="width: 100px; border: 1px black solid; border-radius: 5px;"> <br> 
+        <input type="password" id="haslo2" placeholder="Powtórz hasło" style="width: 100px; border: 1px black solid; border-radius: 5px;"> <br> 
+        <input type="button" id="sprawdz" value="Sprawdź" onclick="oblicz()"><br> 
+        <p id="wynik"></p>
+    </div>
+    <div class="d4">
+        STOPKA
+    </div>
+</body>
+</html>
+
+<script>
+const oblicz =()=>{
+    let log = document.getElementById("login").value;
+    let has = document.getElementById("haslo").value;
+    let has2 = document.getElementById("haslo2").value;
+
+    if(log === "")
+        alert("Nie wpisałeś loginu!")  
+    else if(has === "")
+        alert("Nie wpisałeś hasła")
+    else if(has2 === "")
+        alert("Nie powtórzyłeś hasła")
+    else if(has !== has2)
+        alert("źle powtórzyłeś hasło")
+    else
+    wynik.innerHTML="Wszystko zostało wpisane prawidłowo"
+
+}
+</script>
