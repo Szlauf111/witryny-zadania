@@ -1,0 +1,39 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.baner{
+    width: 900px;
+    height: 200px;
+    background-color: red;
+    margin-left: 400px;
+    border: 1px black solid;
+}
+
+.menu{
+    width: 249px;
+    height: 85px;
+    background-color: rgb(175, 175, 175);
+    border: 1px black solid;
+    margin-left: 400px;
+    margin-top: -87px;
+    float: left;
+    padding: 0px;
+}
+
+.zaw{
+    width: 650px;
+    height: 85px;
+    background-color: rgb(175, 175, 175);
+    border: 1px black solid;
+    margin-left: 650px;
+    margin-top: -1px;
+    padding: 0px;
+    text-align: center; 
+}

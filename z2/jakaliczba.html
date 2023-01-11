@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="baner">
+        <a href="index.html">
+        <img src="baner.png" alt="baner">
+        </a>
+    </div>
+    <div class="zaw">
+        <input type="number" id="liczba" placeholder="Podaj liczbę całkowitą należącą do <1;100>" style="width: 276px"> <br>
+        <input type="button" value="Sprawdz" onclick="oblicz()">
+        <p id="wynik"></p>
+    </div>
+    <div class="menu">
+        MENU <br>
+        <a href="opis.html">Opis</a><br>
+        <a href="jakaliczba.html">Jaka to liczba?</a><br>
+        <a href="liczbacalkowita.html">Liczby całkowite z zkresu</a><br>
+    </div>
+</body>
+</html>
+
+<script>
+    const oblicz =()=>{
+        let x = document.getElementById("liczba").value;
+
+        if(x%2==0 && x>=1 && x<=9){
+            wynik.innerHTML = "Liczba "+x+" jest dodatnia, parzysta i jednocyfrowa";
+        }
+        else if(x%2==1 && x>=1 && x<=9){
+            wynik.innerHTML = "Liczba "+x+" jest dodatnia, nieparzysta i jednocyfrowa";
+        }
+
+        else if(x%2==0 && x>=10 && x<=99){
+            wynik.innerHTML = "Liczba "+x+" jest dodatnia, parzysta i dwucyfrowa";
+        }
+        else if(x%2==1 && x>=10 && x<=99){
+            wynik.innerHTML = "Liczba "+x+" jest dodatnia, nieparzysta i dwucyfrowa";
+        }
+        else if(x==100){
+            wynik.innerHTML="Liczba "+x+" jest dodatnia, parzysta i trzycyfrowa";
+        }
+        else{
+            wynik.innerHTML = "Liczba "+x+" nie nalezy do podanego przedzialu";
+        }
+    }
+</script>
