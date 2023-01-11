@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="baner">
+        <a href="index.html">
+        <img src="baner.png" alt="baner">
+        </a>
+    </div>
+    <div class="zaw">
+        <input type="number" name="liczba1" placeholder="Podaj liczbę początkową należącą do <1;10>" style="width: 281px"> <input type="number" name="liczba2" placeholder="Podaj liczbę końcową należącą do <1;10>" style="width: 265px"> <br>
+        <input type="button" value="Sprawdz" onclick="oblicz()"> <br>
+        <p id="wynik"></p>
+    </div>
+    <div class="menu">
+        MENU <br>
+        <a href="opis.html">Opis</a><br>
+        <a href="jakaliczba.html">Jaka to liczba?</a><br>
+        <a href="liczbacalkowita.html">Liczby całkowite z zkresu</a><br>
+    </div>
+</body>
+</html>
+
+<script>
+const oblicz =()=>{
+  var x = Number(document.getElementsByName("liczba1")[0].value);
+  var y = Number(document.getElementsByName("liczba2")[0].value);
+  var wynik = [];
+
+  var blad = document.getElementById("error-msg");
+
+  if (x <= 0) {
+    blad.innerHTML = "wartość nie może być mniejsza niż 1";
+  } else if (x >= 11) {
+    blad.innerHTML = "Warość nie może być większa niż 11";
+  }
+
+  if (y <= 0) {
+    blad.innerHTML = "wartość nie może być mniejsza niż 1";
+  } else if (y >= 11) {
+    blad.innerHTML = "Warość nie może być większa niż 11";
+  }
+
+  if (x <= y) {
+    for (var i = x; i <= y; i++) {
+      wynik.push(i);
+    }
+  } else {
+    for (var i = x; i >= y; i--) {
+      wynik.push(i);
+    }
+  }
+
+  document.getElementById("wynik").innerHTML = wynik;
+}   
+</script>
